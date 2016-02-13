@@ -12,7 +12,7 @@ class SampleStore extends BaseStore {
 	}
 
 	//Caters to actions
-	handler(action: any) {
+	protected handler(action: any) {
 		switch (action.actionType) {
 			case Actions.sampleAction['CONST']:
 				this.setValue(KEYS.SAMPLE_DATA, action.value)
