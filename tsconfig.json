@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "module": "amd",
+        "noImplicitAny": false,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "jsx": "react",
+        "target": "es3",
+        "listFiles": true,
+        "sourceMap": false
+    },
+    "exclude": [
+        "node_modules",
+        "typings",
+        "build"
+    ]
+}

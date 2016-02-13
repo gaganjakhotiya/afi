@@ -1,0 +1,35 @@
+{
+  "name": "AFI",
+  "version": "0.0.1",
+  "description": "Anothe Flux Implementation",
+  "main": "src/index.tsx",
+  "scripts": {
+    "test": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "afi"
+  },
+  "keywords": [
+    "flux",
+    "react",
+    "typescript",
+    "webpack"
+  ],
+  "author": "Gagan Jakhotiya",
+  "license": "",
+  "devDependencies": {
+    "webpack": "1.12.13",
+    "typescript": "1.6.2",
+    "typescript-simple-loader": "0.3.8"
+  },
+  "dependencies": {
+    "flux": "2.1.1",
+    "react": "0.14.7",
+    "react-dom": "0.14.7",
+    "events": "1.1.0",
+    "history": "2.0.0",
+    "object-assign": "4.0.1",
+    "react-router": "~2.0.0"
+  }
+}
