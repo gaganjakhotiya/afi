@@ -26,7 +26,7 @@ function dispatch(action: string | number, data?: any){
 
 function createAction<T extends IActionClass>(Action: IAction<T>): T {
 	var newAction = new Action()
-	var obj = newAction.__proto__
+	var obj = newAction.__proto__ || newAction.constructor.prototype
 	if (!obj.id)
 		obj.id = parseInt(Math.random() * 1000)
 	for (var key in obj) {
