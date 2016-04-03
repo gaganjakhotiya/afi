@@ -14,11 +14,7 @@ interface IAction<T extends IActionClass> {
 	new (...args: any[]): T
 }
 
-String.prototype['toUnderscore'] = function() {
-	return this.replace(/([A-Z])/g, function($1) { return "_" + $1 })
-}
-
-function dispatch(action: string | number, data?: any){
+function dispatch(action: Function, data?: any){
 	if (typeof data !== 'undefined' && typeof data !== 'object')
 		data = { value: data }
 	AppDispatcher.dispatch(assign({ actionType: action }, data))
@@ -34,13 +30,10 @@ function createAction<T extends IActionClass>(Action: IAction<T>): T {
 			continue
 		(function(_obj, _key){
 			let _method = _obj[_key]
-			let _constant = _key.toUnderscore().toUpperCase()
-			let _actionType = _obj.id + '_' + _constant
 			_obj[_key] = function() {
 				let data = _method.apply(null, arguments)
-				dispatch(_actionType, data)
+				dispatch(_obj[_key], data)
 			}
-			_obj[_key].CONST = _actionType
 		}(obj, key))
 	}
 	return newAction

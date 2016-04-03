@@ -1,13 +1,15 @@
 var webpack = require('webpack');
+var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 
 module.exports = {
     entry: {
-        index: "./src/index.tsx"
+        lib: ['./lib/lib.tsx'],
+        app: "./src/index.tsx"
     },
     output: {
         publicPath : '/',
         path: './build',
-        filename: 'bundle.js'
+        filename: '[name].bundle.js'
     },
     module: {
         loaders: [
@@ -16,5 +18,8 @@ module.exports = {
     },
     resolve: {
         extensions: ['', '.js', '.jsx', '.ts', '.tsx']
-    }
+    },
+    plugins: [
+        new CommonsChunkPlugin("lib", "lib.bundle.js")
+    ]
 };

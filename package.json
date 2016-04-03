@@ -1,14 +1,14 @@
 {
   "name": "AFI",
   "version": "0.0.1",
-  "description": "Anothe Flux Implementation",
+  "description": "Another Flux Implementation",
   "main": "src/index.tsx",
   "scripts": {
     "test": "webpack"
   },
   "repository": {
     "type": "git",
-    "url": "afi"
+    "url": "https://github.com/gaganjakhotiya/afi"
   },
   "keywords": [
     "flux",
