@@ -5,26 +5,32 @@
   "path": "typings",
   "bundle": "typings/tsd.d.ts",
   "installed": {
-    "node/node.d.ts": {
-      "commit": "bcd5761826eb567876c197ccc6a87c4d05731054"
-    },
     "flux/flux.d.ts": {
-      "commit": "bcd5761826eb567876c197ccc6a87c4d05731054"
+      "commit": "b8ce9ae1af592fba2040cac0854b2a186ebfa534"
+    },
+    "immutable/immutable.d.ts": {
+      "commit": "b8ce9ae1af592fba2040cac0854b2a186ebfa534"
     },
     "react/react.d.ts": {
-      "commit": "bcd5761826eb567876c197ccc6a87c4d05731054"
+      "commit": "b8ce9ae1af592fba2040cac0854b2a186ebfa534"
     },
-    "react/react-dom.d.ts": {
-      "commit": "bcd5761826eb567876c197ccc6a87c4d05731054"
+    "fbemitter/fbemitter.d.ts": {
+      "commit": "b8ce9ae1af592fba2040cac0854b2a186ebfa534"
+    },
+    "react-router/react-router.d.ts": {
+      "commit": "b8ce9ae1af592fba2040cac0854b2a186ebfa534"
     },
     "object-assign/object-assign.d.ts": {
-      "commit": "bcd5761826eb567876c197ccc6a87c4d05731054"
+      "commit": "b8ce9ae1af592fba2040cac0854b2a186ebfa534"
     },
-    "history/history.d.ts": {
-      "commit": "bcd5761826eb567876c197ccc6a87c4d05731054"
+    "node/node.d.ts": {
+      "commit": "b8ce9ae1af592fba2040cac0854b2a186ebfa534"
     },
     "react-router/history.d.ts": {
-      "commit": "bcd5761826eb567876c197ccc6a87c4d05731054"
+      "commit": "b8ce9ae1af592fba2040cac0854b2a186ebfa534"
+    },
+    "react/react-dom.d.ts": {
+      "commit": "b8ce9ae1af592fba2040cac0854b2a186ebfa534"
     }
   }
 }

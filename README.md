@@ -1,7 +1,7 @@
 # afi
 Another Flux Implementation is a quick starter front-end development framework to build [React](http://facebook.github.io/react/index.html) application based on [Flux Application Architecture](https://facebook.github.io/flux/) using [TypeScript](http://www.typescriptlang.org/).
 
-**afi** uses [Webpack](https://webpack.github.io/) and [TypeScript Simple Loader](https://github.com/blakeembrey/typescript-simple-loader) to bundle the JavaScript code.
+**afi** uses [Webpack](https://webpack.github.io/) and [ts-loader](https://github.com/TypeStrong/ts-loader) to bundle the JavaScript code.
 
 ## Usage
 Clone the repo

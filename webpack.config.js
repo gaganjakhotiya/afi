@@ -13,7 +13,7 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.tsx?$/, loader: "typescript-simple-loader" }
+            { test: /\.tsx?$/, loader: "ts-loader" }
         ],
     },
     resolve: {
