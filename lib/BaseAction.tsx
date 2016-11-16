@@ -1,16 +1,12 @@
 import AppDispatcher = require('./Dispatcher')
 import assign = require('object-assign')
 
-declare var parseInt: {
-	(value: string | number):number
-}
-
-interface IActionClass {
-	id?: number;
+interface IActionInstance{
 	__proto__?: any;
+	//[key: string]: (...args: any[]) => {[key: string]: any}
 }
 
-interface IAction<T extends IActionClass> { 
+interface IActionClass<T extends IActionInstance> { 
 	new (...args: any[]): T
 }
 
@@ -20,11 +16,9 @@ function dispatch(action: Function, data?: any){
 	AppDispatcher.dispatch(assign({ actionType: action }, data))
 }
 
-function createAction<T extends IActionClass>(Action: IAction<T>): T {
+function createAction<T extends IActionInstance>(Action: IActionClass<T>): T {
 	var newAction = new Action()
 	var obj = newAction.__proto__ || newAction.constructor.prototype
-	if (!obj.id)
-		obj.id = parseInt(Math.random() * 1000)
 	for (var key in obj) {
 		if (typeof obj[key] !== 'function')
 			continue
@@ -40,6 +34,5 @@ function createAction<T extends IActionClass>(Action: IAction<T>): T {
 }
 
 export = {
-	createAction: createAction,
-	dispatch: dispatch
+	createAction: createAction
 }
